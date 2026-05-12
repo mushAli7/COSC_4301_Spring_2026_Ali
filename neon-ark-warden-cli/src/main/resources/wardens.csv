@@ -1,0 +1,7 @@
+warden_id,first_name,last_name,email,identifier_type,identifier_value,role,employment_status,clearance_level,start_date,end_date
+1,Jessica,Sam,jessica.sam@neonark.org,Badge,1001,Admin,Active,Alpha,2025-01-15,
+2,Mark,David,mark.david@neonark.org,Passport,2048,Field,Active,Omega,2025-02-10,
+3,Bella,,bella@neonark.org,Visa,7781,Rift,OnLeave,Eclipse,2024-11-03,
+4,Shawn,Ariel,shawn.ariel@neonark.org,Badge,1022,Trainer,Active,Alpha,2025-03-01,
+5,Oliver,Henry,oliver.henry@neonark.org,Passport,3091,Astral,Active,Omega,2024-09-20,
+6,Lucas,Mateo,lucas.mateo@neonark.org,Visa,8820,Field,Terminated,Alpha,2024-01-08,2025-06-30
