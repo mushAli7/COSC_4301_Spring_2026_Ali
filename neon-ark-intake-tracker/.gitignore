@@ -33,6 +33,7 @@ out/
 /dist/
 /nbdist/
 /.nb-gradle/
+my-docker-java-monster/
 
 ### VS Code ###
 .vscode/
