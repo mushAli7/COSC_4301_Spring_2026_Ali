@@ -1,0 +1,105 @@
+### =====================================================
+### Neon Ark Creature Management System
+### API Route Testing
+### =====================================================
+
+### =====================================================
+### 1. Get All Creatures
+### =====================================================
+
+GET http://localhost:8081/api/creatures
+
+
+### =====================================================
+### 2. Get Creature By ID
+### =====================================================
+
+GET http://localhost:8081/api/creatures/1
+
+
+### =====================================================
+### 3. Create Creature
+### =====================================================
+
+POST http://localhost:8081/api/creatures
+Content-Type: application/json
+
+{
+  "name": "Drako",
+  "species": "Inferno Wyvern",
+  "dangerLevel": "HIGH",
+  "status": "ACTIVE",
+  "notes": "Extremely aggressive near containment walls.",
+  "habitatId": 1
+}
+
+
+### =====================================================
+### 4. Rename Creature
+### =====================================================
+
+PUT http://localhost:8081/api/creatures/1/name
+Content-Type: application/json
+
+{
+  "newName": "Nyx Prime"
+}
+
+
+### =====================================================
+### 5. Soft Delete Creature
+### =====================================================
+
+DELETE http://localhost:8081/api/creatures/4
+
+
+### =====================================================
+### 6. Get Creature Observations
+### =====================================================
+
+GET http://localhost:8081/api/creatures/1/observations
+
+
+### =====================================================
+### 7. Find Feedings By Time
+### =====================================================
+
+GET http://localhost:8081/api/feedings?time=08:00
+
+
+### =====================================================
+### 8. Get Admin Users
+### =====================================================
+
+GET http://localhost:8081/api/admin/users
+
+
+### =====================================================
+### 9. Validation Test - Invalid Creature ID
+### =====================================================
+
+GET http://localhost:8081/api/creatures/-1
+
+
+### =====================================================
+### 10. Conflict Test - Duplicate Creature Name
+### =====================================================
+
+POST http://localhost:8081/api/creatures
+Content-Type: application/json
+
+{
+  "name": "Nyx Prime",
+  "species": "Void Panther",
+  "dangerLevel": "HIGH",
+  "status": "ACTIVE",
+  "notes": "Duplicate test case.",
+  "habitatId": 1
+}
+
+
+### =====================================================
+### 11. Bad Request Test - Invalid Feeding Time
+### =====================================================
+
+GET http://localhost:8081/api/feedings?time=invalid

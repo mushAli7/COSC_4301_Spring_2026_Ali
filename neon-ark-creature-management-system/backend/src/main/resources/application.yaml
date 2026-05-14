@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5438/neonarkdb
+    username: neonark
+    password: neonarkpass
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+    show-sql: true
+
+  flyway:
+    enabled: true
+
+server:
+  port: 8081

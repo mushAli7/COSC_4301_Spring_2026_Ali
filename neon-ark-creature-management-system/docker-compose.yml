@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: neon-ark-postgres
+
+    environment:
+      POSTGRES_DB: neonarkdb
+      POSTGRES_USER: neonark
+      POSTGRES_PASSWORD: neonarkpass
+
+    ports:
+      - "5438:5432"
+
+    volumes:
+      - neonark-data:/var/lib/postgresql/data
+
+volumes:
+  neonark-data:
